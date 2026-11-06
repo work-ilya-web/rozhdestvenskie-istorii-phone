@@ -1,0 +1,38 @@
+/* Cottage controls live only in its two extra views. Paintings stay unobscured. */
+.baking-layer{position:absolute;inset:0;z-index:4;pointer-events:none}
+.baking-layer[hidden],.baking-tray[hidden],#searchTray[hidden]{display:none!important}
+.baking-control{font:inherit;cursor:inherit;touch-action:manipulation}
+.baking-layer .baking-control{position:absolute;transform:translate(-50%,-50%);padding:0;border:0;background:transparent;color:#fff7d4;pointer-events:auto}
+.baking-layer .baking-control:focus-visible{outline:3px solid #ffe29a;outline-offset:4px;border-radius:20px}
+.baking-dish{aspect-ratio:1;filter:drop-shadow(2px 7px 5px #4c27116b);transition:filter .15s}
+.baking-dish img{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none}
+.baking-dish:not(:disabled):hover{filter:drop-shadow(2px 7px 5px #4c27116b) drop-shadow(0 0 8px #ffdf8588)}
+.baking-dish:disabled{opacity:1}
+.baking-ingredient{border-radius:46%!important}
+.baking-ingredient span{position:absolute;right:7%;bottom:7%;width:24px;height:24px;display:grid;place-items:center;border-radius:50%;background:#49331ddd;border:1px solid #ffe29b;color:#fff4c5;font:700 18px system-ui;box-shadow:0 0 8px #ffcb6e66;pointer-events:none}
+.baking-ingredient:not(:disabled):hover{background:radial-gradient(ellipse,#ffe89b1c,transparent 70%);box-shadow:0 0 15px #ffe49866}
+.baking-ingredient.is-added span{background:#416548}
+.baking-tray{height:var(--tray-height,120px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:8px 12px;border:2px solid #b88f54;border-top:3px solid #f5ddb2;border-radius:0 0 16px 16px;background:linear-gradient(115deg,#573824,#8c6040 48%,#573824);color:#fff3d6;box-shadow:inset 0 0 0 3px #38271c77}
+.baking-instruction{text-align:center;font:500 clamp(13px,1.35vw,19px) Georgia,serif;text-shadow:0 1px 2px #201409}
+.baking-actions{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px;width:100%}
+.baking-chip,.baking-primary{border:1px solid #d6b070;border-radius:18px;padding:7px 14px;color:#ffe9bf;background:#392a20b3;font:600 clamp(11px,1.05vw,14px) system-ui;cursor:url('assets/christmas-cursor.svg') 4 3,pointer;min-height:33px}
+.baking-primary{background:linear-gradient(#ffe5ac,#d3a468);color:#432d1c;border-color:#fff0be;box-shadow:0 2px 5px #28160f66;padding-inline:24px}
+.baking-chip:hover,.baking-primary:hover{box-shadow:0 0 9px #ffde9b55}
+.baking-chip:focus-visible,.baking-primary:focus-visible{outline:3px solid #fff2c1;outline-offset:2px}
+.baking-chip.is-added{background:#405d3c;color:#fff2cc}
+.baking-chip:disabled{opacity:.8;cursor:default}
+.baking-exit{margin-left:8px}
+.baking-oven span{position:absolute;inset:8%;border-radius:45%;box-shadow:0 0 12px 3px #ffc96899;opacity:.5}
+.baking-oven:not(:disabled):hover span{box-shadow:0 0 22px 7px #ffe29bcc;opacity:.9}
+.baking-oven.is-baking span{animation:baking-warmth 1.5s ease-in-out infinite alternate}
+.baking-meter{width:min(260px,45%);height:12px;overflow:hidden;border:1px solid #f0c889;border-radius:12px;background:#34251d}
+.baking-meter i{height:100%;display:block;transform-origin:left;background:linear-gradient(90deg,#d6903b,#ffe29c);animation:baking-progress var(--bake-ms) linear forwards}
+.baking-layer.is-inactive,.baking-tray.is-inactive{pointer-events:none}
+.is-paused .baking-oven span,.is-paused .baking-meter i{animation-play-state:paused!important}
+.detail-door .detail-loupe-beacon{top:35%;right:25%}
+.detail-door .detail-shimmer{inset:2%;background:radial-gradient(ellipse,#ffdb7440,transparent 70%)}
+.compact .baking-tray{gap:5px;padding:5px}.compact .baking-chip,.compact .baking-primary{padding:5px 10px;min-height:29px}
+@keyframes baking-warmth{from{opacity:.25;box-shadow:0 0 8px 2px #ffb95255}to{opacity:.65;box-shadow:0 0 16px 5px #ffce7899}}
+@keyframes baking-progress{from{transform:scaleX(var(--bake-start,0))}to{transform:scaleX(1)}}
+@media(max-width:500px){.baking-tray{gap:6px;padding:6px}.baking-actions{gap:4px}.baking-chip,.baking-primary{padding:5px 8px;min-height:30px}.baking-exit{margin-left:2px}.baking-ingredient span{width:19px;height:19px;font-size:14px}}
+@media(prefers-reduced-motion:reduce){.baking-oven.is-baking span{animation:none;opacity:.5}.baking-dish{transition:none}}

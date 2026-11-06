@@ -1,0 +1,36 @@
+.tea-draggable{touch-action:none;user-select:none;-webkit-user-select:none}
+.tea-pot-prop{position:absolute;pointer-events:none;transform-origin:42% 60%;filter:drop-shadow(1px 5px 4px #2b160e55)}
+.tea-pot-button{overflow:visible;border-radius:0!important}
+.tea-pot-button img,.tea-loose-lid img{display:block;width:100%;height:100%;object-fit:fill;pointer-events:none}
+.tea-pot-button:hover,.tea-loose-lid:hover,.tea-ingredient-source:hover{box-shadow:none!important;filter:drop-shadow(0 0 5px #ffdc8a66)}
+.tea-loose-lid{filter:drop-shadow(0 3px 2px #2b160e55);border-radius:0}
+.tea-seated-lid{position:absolute;pointer-events:none;animation:tea-lid-settle .3s ease-out}
+@keyframes tea-lid-settle{from{transform:translateY(-12px)}to{transform:translateY(0)}}
+.tea-pot-contents{position:absolute;border-radius:50%;overflow:hidden;pointer-events:none}
+.tea-pot-contents.has-water{background:radial-gradient(ellipse at 40% 25%,#a86b2caa,#3f1c0de6);box-shadow:inset 0 2px 4px #28120777}
+.tea-real-ingredient{position:absolute;height:auto;object-fit:contain;pointer-events:none}
+.tea-ingredient-source img{position:absolute;object-fit:contain;filter:drop-shadow(1px 3px 2px #32190e77);pointer-events:none}
+.tea-drag-ghost{position:absolute;transform:translate(-50%,-50%);pointer-events:none;z-index:20;filter:drop-shadow(3px 12px 7px #27130966)}
+.tea-drag-ghost>img{display:block;width:100%;height:100%;object-fit:contain}
+.tea-pot-copy{position:relative;width:100%;height:100%;pointer-events:none}
+.tea-ingredient-arrival{position:absolute;pointer-events:none;object-fit:contain;z-index:22}
+.tea-drop-target{position:absolute;pointer-events:none;border:2px dashed #ffe3a0;border-radius:50%;opacity:0;box-shadow:0 0 12px #ffd47777;transition:opacity .15s;z-index:10}
+.tea-layer.is-dragging .tea-drop-target{opacity:.65}
+.tea-layer.is-drop-ready .tea-drop-target{border-color:#dfedbd;box-shadow:0 0 20px #e1ff9dbb;opacity:1}
+.tea-cat-seat-shadow{position:absolute;border-radius:50%;background:radial-gradient(ellipse,#28150e99,transparent 72%);filter:blur(3px);pointer-events:none}
+.tea-clock{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;z-index:12;filter:drop-shadow(0 3px 5px #2b140c66)}
+.tea-clock-face{display:block;position:relative;width:80%;aspect-ratio:1;border-radius:50%;border:4px solid #b37d3f;background:radial-gradient(circle,#fff7d9,#f3d69c);box-shadow:inset 0 0 0 2px #fff3c7}
+.tea-clock-face:before{content:'';position:absolute;inset:7%;border:2px dotted #95622f;border-radius:50%}
+.tea-clock-hand{position:absolute;bottom:50%;left:calc(50% - 1px);width:2px;height:35%;background:#634022;transform-origin:50% 100%;animation:tea-clock-hand 6s steps(6,end) both;animation-delay:var(--clock-offset,0ms)}
+.tea-clock-face b{position:absolute;width:7px;height:7px;top:calc(50% - 3.5px);left:calc(50% - 3.5px);border-radius:50%;background:#9e6537}
+.tea-clock-label{padding:3px 6px;border-radius:10px;background:#51341ee8;color:#fff0c7;font:clamp(8px,1vw,13px)/1.1 Georgia,serif;white-space:nowrap}
+@keyframes tea-clock-hand{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.tea-pot-prop.is-pouring{z-index:15;animation:tea-pot-pour 2200ms ease-in-out both;animation-delay:var(--pour-offset,0ms)}
+@keyframes tea-pot-pour{0%,100%{transform:translate(0,0) rotate(0)}18%{transform:translate(12%,-24%) rotate(0)}30%,72%{transform:translate(12%,-15%) rotate(25deg)}88%{transform:translate(12%,-24%) rotate(0)}}
+.tea-pouring-stream{z-index:16;animation:tea-pour-stream 2200ms linear both;animation-delay:var(--pour-offset,0ms)}
+.tea-pouring-stream path{stroke:#ba702dd9;stroke-width:.36;stroke-dasharray:none;animation:none}
+@keyframes tea-pour-stream{0%,26%,78%,100%{opacity:0}33%,70%{opacity:.9}}
+.tea-cup-liquid.is-filling{animation:tea-cup-pour 2200ms ease-in-out both;animation-delay:var(--pour-offset,0ms)}
+@keyframes tea-cup-pour{0%,28%{opacity:0;transform:scale(.2)}74%,100%{opacity:1;transform:scale(1)}}
+.is-paused .tea-pot-prop,.is-paused .tea-clock-hand,.is-paused .tea-pouring-stream,.is-paused .tea-cup-liquid,.tea-layer.is-inactive .tea-pot-prop,.tea-layer.is-inactive .tea-clock-hand,.tea-layer.is-inactive .tea-pouring-stream,.tea-layer.is-inactive .tea-cup-liquid{animation-play-state:paused!important}
+@media(prefers-reduced-motion:reduce){.tea-pot-prop.is-pouring{animation:none!important}.tea-seated-lid,.tea-clock-hand,.tea-cup-liquid.is-filling{animation:none!important}.tea-clock-hand{transform:rotate(45deg)}.tea-drag-ghost{filter:drop-shadow(1px 3px 2px #27130966)}}

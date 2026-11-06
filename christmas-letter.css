@@ -1,0 +1,39 @@
+.letter-layer{position:absolute;inset:0;z-index:4;pointer-events:none}
+.letter-layer[hidden],.letter-tray[hidden]{display:none!important}
+.letter-control{cursor:url('assets/christmas-cursor.svg') 4 3,pointer;touch-action:none}
+.letter-layer .letter-control{position:absolute;transform:translate(-50%,-50%);padding:0;border:0;background:transparent;pointer-events:auto}
+.letter-layer .letter-control img{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none}
+.letter-layer .letter-control:disabled{opacity:1}
+.letter-layer .letter-control:focus-visible{outline:3px solid #ffe9a5;outline-offset:4px;border-radius:16px}
+.letter-sticker img{filter:drop-shadow(1px 3px 2px #3d24134d);animation:letter-sticker-wiggle 3.8s ease-in-out infinite;animation-delay:var(--sticker-delay,0s)}
+.letter-sticker.is-selected img,.letter-envelope.is-selected img{filter:drop-shadow(0 0 3px #fff7be) drop-shadow(0 0 7px #ffd878)}
+.letter-sticker:not(:disabled):hover img,.letter-envelope:not(:disabled):hover img,.letter-pencil:not(:disabled):hover img{filter:drop-shadow(0 0 5px #ffe399) drop-shadow(1px 3px 2px #3d24134d)}
+.letter-envelope img,.letter-pencil img{filter:drop-shadow(1px 4px 3px #3d241355)}
+.letter-paper,.letter-finished{position:absolute;transform:translate(-50%,-50%);pointer-events:none}
+.letter-sheet,.letter-finished>img:first-child{display:block;width:100%;height:100%;object-fit:fill;filter:drop-shadow(1px 5px 4px #43250d55)}
+.letter-ink{position:absolute;left:12%;right:10%;top:20%;color:#44546b;font:italic clamp(8px,calc(var(--frame-width)*.016),28px)/1.8 Georgia,'Times New Roman',serif;text-shadow:0 0 .25px #44546b}
+.letter-line{white-space:nowrap;min-height:1.8em}
+.letter-applied-sticker{position:absolute;transform:translate(-50%,-50%);width:20%;height:15%;object-fit:contain;filter:drop-shadow(0 1px 1px #6d4d1922)}
+.letter-finished .letter-seal{position:absolute;left:43%;top:42%;width:17%;height:25%;object-fit:contain;filter:drop-shadow(0 1px 1px #5a412333)}
+.letter-layer .letter-writer{width:clamp(30px,3.4vw,48px);height:clamp(30px,3.4vw,48px);border-radius:50%;background:#fdf3c482;box-shadow:0 0 12px #ffe4a9b3;z-index:3;user-select:none}
+.letter-writer .letter-writing-flake{filter:drop-shadow(0 0 4px #daf2ff)}
+.letter-writer .letter-writing-pencil{position:absolute;left:40%;top:-75%;width:200%;height:135%;object-fit:contain}
+.letter-writer.is-writing .letter-writing-flake{animation:letter-writing-sparkle .7s ease-in-out infinite alternate}
+.letter-tray{height:var(--tray-height,120px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:8px 12px;border:2px solid #b28b51;border-top:3px solid #efd9af;border-radius:0 0 16px 16px;background:linear-gradient(115deg,#403f2b,#657052 48%,#403f2b);color:#fff4d9;box-shadow:inset 0 0 0 3px #29312088}
+.letter-instruction{text-align:center;font:500 clamp(13px,1.35vw,19px) Georgia,serif;text-shadow:0 1px 2px #201409}
+.letter-actions{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;width:100%}
+.letter-chip,.letter-primary{border:1px solid #d6b679;border-radius:18px;padding:7px 16px;color:#fff0ce;background:#283622bd;font:600 clamp(11px,1.05vw,14px) system-ui;min-height:33px;cursor:url('assets/christmas-cursor.svg') 4 3,pointer}
+.letter-primary{background:linear-gradient(#fff0ba,#d8b676);color:#3c351e;border-color:#fff0c8;box-shadow:0 2px 5px #1c241466}
+.letter-primary:disabled{opacity:.5;cursor:default}
+.letter-chip:hover,.letter-primary:not(:disabled):hover{box-shadow:0 0 9px #ffde9b55}
+.letter-chip:focus-visible,.letter-primary:focus-visible{outline:3px solid #fff2c1;outline-offset:2px}
+.letter-meter{width:min(250px,45%);height:12px;border:1px solid #e5cd97;border-radius:12px;overflow:hidden;background:#263023}
+.letter-meter i{display:block;width:var(--letter-progress,0%);height:100%;background:linear-gradient(90deg,#8aafab,#d0f2ec);transition:width .08s linear}
+.letter-percent{font:600 13px system-ui;min-width:35px}
+.letter-layer.is-inactive,.letter-tray.is-inactive{pointer-events:none}
+.is-paused .letter-sticker img,.is-paused .letter-writing-flake,.letter-layer.is-inactive .letter-sticker img{animation-play-state:paused!important}
+.compact .letter-tray{gap:5px;padding:5px}.compact .letter-chip,.compact .letter-primary{padding:5px 10px;min-height:29px}
+@keyframes letter-sticker-wiggle{0%,100%{transform:rotate(-1.2deg) scale(1)}50%{transform:rotate(1.2deg) scale(1.015)}}
+@keyframes letter-writing-sparkle{from{filter:drop-shadow(0 0 3px #d4eaff)}to{filter:drop-shadow(0 0 8px #fff2b8)}}
+@media(max-width:500px){.letter-tray{gap:6px;padding:6px}.letter-actions{gap:5px}.letter-chip,.letter-primary{padding:5px 10px;min-height:30px}}
+@media(prefers-reduced-motion:reduce){.letter-sticker img,.letter-writer.is-writing .letter-writing-flake{animation:none}.letter-meter i{transition:none}}
