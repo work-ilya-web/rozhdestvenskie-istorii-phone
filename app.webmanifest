@@ -1,0 +1,16 @@
+{
+  "id": "./",
+  "name": "Рождественские истории",
+  "short_name": "Истории",
+  "description": "Уютная рождественская игра с поиском предметов",
+  "lang": "ru",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b1d35",
+  "theme_color": "#0b1d35",
+  "icons": [
+    { "src": "assets/app-icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "assets/app-icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
