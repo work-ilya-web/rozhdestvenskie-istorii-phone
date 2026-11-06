@@ -1,0 +1,8 @@
+/* Full available height. Keep the complete searchable painting in proportion. */
+.play-view,.vk-host .play-view{padding:var(--host-safe-top,0px) var(--host-safe-right,0px) var(--host-safe-bottom,0px) var(--host-safe-left,0px);isolation:isolate;background:#142131;overflow:clip}
+.play-view::before{content:"";position:absolute;inset:-42px;z-index:0;pointer-events:none;background-image:linear-gradient(#17212c20,#17212c35),var(--scene-fill);background-position:center;background-size:cover;background-repeat:no-repeat;filter:blur(clamp(22px,2.3vw,42px)) saturate(.94) brightness(.83);transform:scale(1.035)}
+.play-view .game-frame{position:relative;z-index:1;height:var(--frame-height,100%);display:flex;flex-direction:column;justify-content:flex-start;align-items:center;flex:none;box-shadow:0 0 34px #101a2a45}
+.scene-stage{width:100%;height:var(--stage-height);display:flex;align-items:center;justify-content:center;flex:none}
+.play-view .scene-viewport{flex:none;border-radius:0;box-shadow:0 0 20px #10213633}
+.play-view .search-tray,.play-view .baking-tray,.play-view .letter-tray,.play-view .book-repair-tray{width:100%;flex:none;border-radius:0;margin:0}
+@media(prefers-reduced-transparency:reduce){.play-view::before{filter:blur(36px) saturate(.9) brightness(.7)}}

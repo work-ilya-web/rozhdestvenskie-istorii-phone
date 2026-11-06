@@ -1,0 +1,3 @@
+/* Local porch painting; the original menu and acorn sign stay beneath it. */
+#menuView .menu-porch-cat{position:absolute;left:65.5%;top:49%;width:16%;height:31%;z-index:1;pointer-events:none;user-select:none;mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent),linear-gradient(transparent,#000 7%,#000 93%,transparent);-webkit-mask-composite:source-in;mask-composite:intersect}
+#menuView .menu-porch-cat img{display:block;width:100%;height:100%;object-fit:fill;pointer-events:none;user-select:none}

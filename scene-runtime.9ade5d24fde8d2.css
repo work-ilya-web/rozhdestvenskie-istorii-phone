@@ -1,0 +1,6 @@
+/* Foreground pixels stay fixed when a hidden find disappears. */
+.scene-occluder{position:absolute;display:block;pointer-events:none;user-select:none;object-fit:fill;filter:none}
+.app-background *{animation-play-state:paused!important}
+.vk-host .play-view{padding:calc(var(--layout-pad,4px) + var(--host-safe-top,0px)) calc(var(--layout-pad,4px) + var(--host-safe-right,0px)) calc(var(--layout-pad,4px) + var(--host-safe-bottom,0px)) calc(var(--layout-pad,4px) + var(--host-safe-left,0px))}
+.vk-host .menu-view{padding:var(--host-safe-top,0px) var(--host-safe-right,0px) var(--host-safe-bottom,0px) var(--host-safe-left,0px)}
+.end-card{max-width:94%;max-height:94%;overflow:auto}.end-card .action{margin:3px}

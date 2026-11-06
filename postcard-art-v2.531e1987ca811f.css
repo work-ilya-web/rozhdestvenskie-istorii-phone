@@ -1,0 +1,72 @@
+/* Painted evergreen and wax details, shared by the correspondence screens. */
+.postcard-modal{--post-evergreen:url('assets/phone-v4/df0386276bec61.webp');--post-wax:url('assets/phone-v4/c2e81c2df0527b.webp');background:#180e08ba;backdrop-filter:blur(5px)}
+.postcard-modal .modal-content{isolation:isolate;border:8px ridge #ba8b4c;border-radius:9px;padding:20px 30px 15px;background:radial-gradient(ellipse at 35% 30%,#fff8e3b8,transparent 60%),repeating-radial-gradient(ellipse at 13% 27%,#9c6d2908 0 .7px,#fff5d906 1px 2.7px),linear-gradient(100deg,#d4ab73,#f5e6c4 12%,#f7eacb 65%,#d2ac77);box-shadow:inset 0 0 0 2px #ffebbc,inset 0 0 35px #99622a55,0 7px 0 #613d22,0 24px 65px #000b}
+.postcard-modal .modal-content:before,.postcard-modal .modal-content:after{content:'';position:absolute;bottom:-13px;width:clamp(145px,20vw,255px);height:100px;background:var(--post-evergreen) center/contain no-repeat;filter:drop-shadow(1px 5px 3px #43250c66);text-shadow:none;pointer-events:none;z-index:3}
+.postcard-modal .modal-content:before{left:-28px;transform:rotate(-8deg)}.postcard-modal .modal-content:after{right:-28px;transform:scaleX(-1) rotate(-8deg)}
+.postcard-modal #modalTitle{isolation:isolate;margin:0 0 24px;border:3px double #d3aa5f;outline:1px solid #6e2718;padding:12px 100px 15px;border-radius:9px 9px 45% 45% / 9px 9px 13px 13px;background:repeating-linear-gradient(87deg,#ffdbbf06 0 .8px,transparent 1px 3px),radial-gradient(ellipse at 50% 20%,#b33232,#76131d 75%);box-shadow:inset 0 2px 2px #f3a88044,inset 0 -7px 12px #41071388,0 6px 9px #6f3b1c66;font-family:Georgia,'Times New Roman',serif;letter-spacing:.2px}
+.postcard-modal #modalTitle:before,.postcard-modal #modalTitle:after{content:'';position:absolute;top:-22px;width:210px;height:110px;background:var(--post-evergreen) center/contain no-repeat;z-index:-1;pointer-events:none;filter:drop-shadow(0 4px 3px #391e1580)}
+.postcard-modal #modalTitle:before{left:-46px;transform:rotate(22deg)}.postcard-modal #modalTitle:after{right:-46px;transform:scaleX(-1) rotate(22deg)}
+.postcard-modal .post-seal{width:94px;height:94px;top:17px;left:19px;display:block;border:0;border-radius:0;background:var(--post-wax) center/contain no-repeat;box-shadow:none;font-size:0;color:transparent;transform:rotate(-12deg);filter:drop-shadow(1px 5px 3px #3b0f0c77);pointer-events:none;z-index:4}
+.postcard-modal .post-tabs{height:78px;left:9%;right:9%;gap:12px}
+.postcard-modal .post-tabs button{position:relative;isolation:isolate;overflow:hidden;padding:10px 8px 16px;min-height:78px;border:3px double #be955e;border-radius:12px 12px 0 0;background:linear-gradient(155deg,transparent 49%,#9a66394a 50%,transparent 51%),linear-gradient(205deg,#fff0cb 49%,#c59d6d 50%,#ead0a4 51%);font-size:24px;box-shadow:inset 0 0 14px #97652e33,0 -3px 10px #0004;text-shadow:0 1px #fff2cb}
+.post-tabs button:before,.post-tabs button:after{content:'';position:absolute;bottom:-9px;width:90px;height:50px;background:var(--post-evergreen) center/contain no-repeat;z-index:-1;pointer-events:none}.post-tabs button:before{left:-18px;transform:rotate(20deg)}.post-tabs button:after{right:-18px;transform:scaleX(-1) rotate(20deg)}
+.postcard-modal .post-tabs button[aria-current]{border-color:#a32a2b;box-shadow:inset 0 0 0 2px #9d2826,inset 0 0 15px #9c541d33}
+.postcard-modal .story-picker{gap:18px;padding:5px 7px 12px;max-height:calc(100svh - 365px)}
+.postcard-modal .story-tile{border:7px dotted #fff0d3;border-radius:7px;padding:2px 2px 7px;outline:1px solid #bd915c;outline-offset:-6px;background:radial-gradient(ellipse at top,#fff4d8,#ead0a2);box-shadow:0 4px 6px #70481c66}
+.postcard-modal .story-tile>span{margin:5px auto -1px;padding:4px 5px;background:linear-gradient(95deg,#e9c999,#fff0cd 12%,#fff0cd 85%,#e5c292);border:1px solid #d6b487;border-radius:4px;width:92%;box-shadow:0 1px 3px #60442122}
+.postcard-modal .story-tile .post-stamp{top:3px;right:4px;border:3px dotted #c99448;outline:2px solid #ffedc4;padding:4px 7px;background:linear-gradient(120deg,#ffeac0,#efd29b);box-shadow:0 2px 5px #47291677}
+.post-stamp b{font-size:30px;color:#e9ad38;text-shadow:0 -1px #fff6cc,1px 2px #9b5719,0 3px 4px #a25d2977}
+.postcard-modal .post-pagination{gap:35px;margin:7px 0 3px}.postcard-modal .post-pagination button{width:53px;height:53px;border:5px double #ffda92;box-shadow:0 0 0 2px #875124,inset 0 0 9px #410713,0 4px 5px #5d351c88}
+.postcard-modal #modalClose{position:relative;z-index:4;border:5px double #d9ad59;outline:1px solid #66451d;padding:8px 42px;border-radius:15px;background:repeating-linear-gradient(85deg,#fff2bd04 0 1px,transparent 1px 3px),linear-gradient(#3d6546,#1d3b2b);box-shadow:inset 0 0 0 2px #193829,inset 0 2px 4px #d7e5ad33,0 5px 8px #68401e66;text-shadow:0 2px #12281d}
+.postcard-modal #modalClose:before,.postcard-modal #modalClose:after{content:'❧';position:absolute;top:8px;color:#dbb46b;font:20px Georgia}.postcard-modal #modalClose:before{left:10px}.postcard-modal #modalClose:after{right:10px;transform:scaleX(-1)}
+.postcard-modal:has(.post-settings) .modal-content{width:min(650px,100%);padding:24px 28px 17px;border-radius:14px 14px 22px 22px;box-shadow:inset 0 0 0 2px #ffebbc,inset 0 0 35px #99622a55,0 7px 0 #613d22,0 24px 65px #000b}
+.postcard-modal:has(.post-settings) #modalTitle{margin-bottom:24px;padding:12px 80px 15px;font-size:36px}
+.postcard-modal:has(.post-settings) #modalTitle:before,.postcard-modal:has(.post-settings) #modalTitle:after{width:150px;height:90px;top:-10px}
+.post-settings{position:relative;z-index:2;padding:3px 22px 6px;max-height:calc(100svh - 475px);scrollbar-width:thin;scrollbar-color:#b89a65 transparent}
+.postcard-modal .settings-line{border-bottom:1px solid #bd995d5c;margin:14px 0;padding-bottom:12px;font-size:20px;gap:14px}
+.postcard-modal #storyMusicTitle{font-style:italic;font-size:15px}
+.postcard-modal button[role=switch]{width:78px;height:37px;border:4px ridge #ca9e54;background:linear-gradient(#705835,#b39060);box-shadow:inset 0 2px 5px #30200a88,0 1px #fff0c3}
+.postcard-modal button[role=switch]:after{top:1px;left:1px;width:27px;height:27px;background:radial-gradient(circle at 35% 30%,#fff7ce,#efcb7d 45%,#bc7e31);border:1px solid #d2a45d;box-shadow:inset 0 1px #fff4c9,1px 2px 4px #3c260d88}
+.postcard-modal button[aria-checked=true]{background:linear-gradient(#183c26,#4e7149)}.postcard-modal button[aria-checked=true]:after{transform:translateX(40px)}
+.postcard-modal input[type=range]{appearance:none;-webkit-appearance:none;width:190px;height:12px;border:1px solid #9f7a44;border-radius:15px;background:linear-gradient(90deg,#365738,#768451 60%,#e0c69a 60%);box-shadow:inset 0 2px 3px #64452055}
+.postcard-modal input[type=range]::-webkit-slider-thumb{appearance:none;width:32px;height:32px;border:3px double #f5cf82;border-radius:50%;background:radial-gradient(circle at 35% 30%,#bd5b25,#792114);box-shadow:0 0 0 2px #976826,0 3px 4px #4f2c1a66;cursor:grab}
+.postcard-modal input[type=range]::-moz-range-thumb{width:27px;height:27px;border:3px double #f5cf82;border-radius:50%;background:#a64c22;box-shadow:0 3px 4px #4f2c1a66}
+.post-envelope-flap{position:relative;height:105px;margin:0 -20px -9px;isolation:isolate;pointer-events:none}
+.post-envelope-flap:before{content:'';position:absolute;inset:0 -5px -67px;z-index:-1;background:linear-gradient(151deg,transparent 48.9%,#b68a4b 49.3%,#fff0cb 49.7%,#e4c595 50.2%,transparent 51%),linear-gradient(209deg,transparent 48.9%,#b68a4b 49.3%,#fff0cb 49.7%,#dfbf8c 50.2%,transparent 51%);border-radius:0 0 12px 12px}
+.post-envelope-cord{position:absolute;left:5%;right:5%;top:48%;height:3px;border-radius:50%;background:repeating-linear-gradient(120deg,#8c1921 0 5px,#f9e7bc 5px 10px);box-shadow:0 2px 2px #77522c55;transform:rotate(-6deg)}
+.post-envelope-cord:after{content:'';position:absolute;inset:0;background:inherit;transform:rotate(12deg)}
+.postcard-modal .post-envelope-seal{top:5px;left:calc(50% - 48px);width:96px;height:96px;transform:rotate(8deg)}
+.postcard-modal:has(.post-settings) .modal-content:before,.postcard-modal:has(.post-settings) .modal-content:after{bottom:10px;width:210px;height:115px}
+.postcard-modal:has(.post-settings) #modalClose{margin:0 0 2px}
+@media(max-width:650px){
+ .postcard-modal{padding:89px 12px 12px}.postcard-modal .modal-content{padding:15px 13px 10px;border-width:5px;max-height:calc(100svh - 105px)}
+ .postcard-modal #modalTitle{padding:12px 43px;font-size:26px;margin-bottom:20px}.postcard-modal #modalTitle:before,.postcard-modal #modalTitle:after{width:125px;height:80px;top:-13px}.postcard-modal #modalTitle:before{left:-30px}.postcard-modal #modalTitle:after{right:-30px}
+ .postcard-modal .post-seal{display:block;left:-4px;top:17px;width:62px;height:62px}.postcard-modal .post-tabs{height:73px;left:3%;right:3%;gap:6px}.postcard-modal .post-tabs button{min-height:73px;padding:8px 4px 14px;font-size:20px}.post-tabs span{font-size:15px}.post-tabs button:before,.post-tabs button:after{width:62px;height:37px}
+ .postcard-modal .story-picker{gap:10px;padding:3px 3px 9px;max-height:calc(100svh - 335px)}.postcard-modal .story-tile{border-width:4px}.postcard-modal .story-tile>span{font-size:12px;width:100%;padding:4px 2px}.postcard-modal .story-tile .post-stamp{padding:2px;font-size:10px}.post-stamp b{font-size:22px}
+ .postcard-modal .modal-content:before,.postcard-modal .modal-content:after{width:125px;height:70px;bottom:-12px}.postcard-modal .modal-content:before{left:-20px}.postcard-modal .modal-content:after{right:-20px}
+ .postcard-modal:has(.post-settings) .modal-content{padding:18px 13px 14px}.postcard-modal:has(.post-settings) #modalTitle{font-size:27px;padding:12px 30px}.postcard-modal:has(.post-settings) #modalTitle:before,.postcard-modal:has(.post-settings) #modalTitle:after{width:100px;height:65px}
+ .post-settings{padding:0 8px 4px;max-height:calc(100svh - 430px)}.postcard-modal .settings-line{font-size:17px;margin:12px 0;padding-bottom:11px}.postcard-modal #storyMusicTitle{font-size:12px}
+ .post-envelope-flap{height:88px;margin-left:-8px;margin-right:-8px}.postcard-modal .post-envelope-seal{left:calc(50% - 40px);top:0;width:80px;height:80px}.postcard-modal:has(.post-settings) .modal-content:before,.postcard-modal:has(.post-settings) .modal-content:after{width:145px;height:85px;bottom:15px}
+ .postcard-modal #modalClose{font-size:20px;padding:8px 32px}.postcard-modal input[type=range]{width:135px}.postcard-modal .post-pagination{gap:24px}.postcard-modal .post-pagination button{width:45px;height:45px}
+}
+@media(max-height:600px){.postcard-modal{padding-top:80px;place-items:start center}.post-settings{max-height:calc(100svh - 300px)}.post-envelope-flap{height:60px}.postcard-modal .post-envelope-seal{width:60px;height:60px;left:calc(50% - 30px);top:0}.postcard-modal:has(.post-settings) #modalTitle{margin-bottom:10px}}
+.postcard-modal input[type=range]{background:linear-gradient(90deg,#365738 0%,#61784a var(--post-volume,18%),#d5b887 var(--post-volume,18%),#ead5ae 100%)}
+.postcard-modal input[type=range]::-webkit-slider-thumb{width:35px;height:35px;border:0;background:var(--post-wax) center/contain no-repeat;box-shadow:none;filter:drop-shadow(0 2px 2px #4f2c1a77)}
+.postcard-modal input[type=range]::-moz-range-thumb{width:35px;height:35px;border:0;background:var(--post-wax) center/contain no-repeat;box-shadow:none;filter:drop-shadow(0 2px 2px #4f2c1a77)}
+/* Keep replay in sight while the settings above it scroll independently. */
+.postcard-modal:has(.post-level-actions) .modal-content{display:flex;flex-direction:column;min-height:0}
+.postcard-modal:has(.post-level-actions) #modalTitle,.postcard-modal:has(.post-level-actions) #modalClose{flex:none}
+.postcard-modal:has(.post-level-actions) #modalClose{align-self:center}
+.postcard-modal:has(.post-level-actions) #modalBody{display:flex;flex-direction:column;flex:1;min-height:0}
+.postcard-modal:has(.post-level-actions) .post-settings{flex:1;min-height:0;max-height:none;overflow:auto}
+.postcard-modal .post-level-actions{display:flex;align-items:stretch;gap:12px;flex:none;padding:9px 17px 5px;position:relative;z-index:4}
+.postcard-modal .post-level-actions button{margin:0;cursor:pointer}
+.postcard-modal .post-restart-button{display:flex;align-items:center;justify-content:center;gap:12px;flex:1;min-width:0;padding:10px 14px;border:4px double #e4bd79;border-radius:12px;background:linear-gradient(#9d3230,#6f1d26);box-shadow:inset 0 1px 4px #e9b27b33,0 3px 5px #76532c55;color:#fff0c6;font:bold 18px/1.2 Georgia;text-shadow:0 1px #49201a;text-align:left}
+.post-restart-icon{font:36px/1 Georgia;color:#f6d48b;flex:none}
+.post-restart-button small{display:block;margin-top:4px;font:12px/1.2 Georgia;font-weight:400;color:#ead6b3;text-shadow:none}
+.postcard-modal .post-restart-button:hover{filter:brightness(1.12)}
+.postcard-modal .post-home-button{flex:0 0 115px;padding:9px 12px;font:15px/1.2 Georgia;border:2px solid #bc9459;border-radius:12px}
+.postcard-modal:has(.post-level-actions) .post-envelope-flap{flex:none;height:78px}
+.postcard-modal:has(.post-level-actions) .post-envelope-seal{width:77px;height:77px;left:calc(50% - 38.5px);top:0}
+@media(max-width:650px){.postcard-modal .post-level-actions{padding:7px 3px 3px;gap:7px}.postcard-modal .post-restart-button{font-size:15px;padding:9px 7px;gap:6px}.post-restart-icon{font-size:30px}.post-restart-button small{font-size:11px}.postcard-modal .post-home-button{flex-basis:85px;font-size:13px;padding:6px}.postcard-modal:has(.post-level-actions) .post-envelope-flap{height:65px}.postcard-modal:has(.post-level-actions) .post-envelope-seal{width:65px;height:65px;left:calc(50% - 32.5px)}}
+@media(max-height:600px){.postcard-modal:has(.post-level-actions) .modal-content{padding-top:10px;padding-bottom:8px;max-height:calc(100svh - 95px)}.postcard-modal:has(.post-level-actions) #modalTitle{font-size:25px;padding-top:8px;padding-bottom:8px;margin-bottom:6px}.postcard-modal:has(.post-level-actions) .post-envelope-flap{display:none}.postcard-modal .post-level-actions{padding-top:5px;padding-bottom:5px}.postcard-modal .post-restart-button{font-size:14px;padding:6px 10px}.post-restart-icon{font-size:26px}.postcard-modal:has(.post-level-actions) #modalClose{font-size:17px;padding:5px 30px}.postcard-modal:has(.post-level-actions) .settings-line{margin:9px 0;padding-bottom:9px}}

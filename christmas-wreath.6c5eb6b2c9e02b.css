@@ -1,0 +1,36 @@
+.wreath-layer{position:absolute;inset:0;z-index:5;pointer-events:none}
+.wreath-layer[hidden],.wreath-tray[hidden]{display:none!important}
+.wreath-control{font:inherit;cursor:inherit;touch-action:manipulation}
+.wreath-layer .wreath-control,.wreath-room-prop,.wreath-preview,.wreath-drag-ghost{position:absolute;transform:translate(-50%,-50%);padding:0;border:0;background:transparent;pointer-events:auto}
+.wreath-layer img{width:100%;height:100%;object-fit:contain;display:block;pointer-events:none;user-select:none}
+.wreath-supply,.wreath-placed,.wreath-preview,.wreath-drag-ghost{filter:drop-shadow(1px 4px 3px #27130488)}
+.wreath-supply,.wreath-placed{z-index:3;touch-action:none}
+.wreath-stock{position:absolute;right:-8px;bottom:-5px;min-width:23px;padding:2px 5px;border:1px solid #e6c58d;border-radius:11px;background:#392516ed;color:#fff1cf;font:700 12px system-ui;text-align:center;box-shadow:0 1px 4px #22140788;pointer-events:none;text-shadow:none}
+.wreath-supply.is-empty{opacity:.35;filter:grayscale(.4)}
+.wreath-supply:hover,.wreath-supply.is-selected,.wreath-placed:not(:disabled):hover{filter:drop-shadow(0 0 7px #fff0b3) drop-shadow(1px 4px 3px #27130488)}
+.wreath-control:focus-visible{outline:3px solid #ffe2a1;outline-offset:3px;border-radius:10px}
+.wreath-surface{z-index:1;border-radius:50%}
+.wreath-spot{z-index:2;border-radius:50%!important;border:1px solid #ffe6a68c!important;background:radial-gradient(circle,#ffeca629,transparent 70%)!important;opacity:.6}
+.wreath-spot:hover,.wreath-spot:focus-visible{opacity:1;background:#fff0a44d!important}
+.wreath-preview,.wreath-drag-ghost{z-index:6;opacity:.72;pointer-events:none!important;filter:drop-shadow(0 0 5px #ffe7a6) drop-shadow(2px 5px 3px #21100788)}
+.wreath-drag-ghost{opacity:.6}.wreath-drag-ghost.is-valid{opacity:.9}
+.wreath-gun{z-index:4;filter:drop-shadow(2px 5px 4px #2f170c88);transition:filter .15s}
+.wreath-gun:disabled{opacity:.65}.wreath-gun.is-ready{filter:drop-shadow(0 0 9px #ffe6a7)}
+.wreath-placed:disabled{opacity:1;pointer-events:none!important}
+.wreath-tray{height:var(--tray-height,120px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:8px 12px;border:2px solid #b88f54;border-top:3px solid #f5ddb2;background:linear-gradient(115deg,#573824,#8c6040 48%,#573824);color:#fff3d6;box-shadow:inset 0 0 0 3px #38271c77}
+.wreath-instruction{text-align:center;font:500 clamp(12px,1.3vw,18px) Georgia,serif;text-shadow:0 1px 2px #201409}
+.wreath-actions{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px;width:100%}
+.wreath-chip{border:1px solid #d6b070;border-radius:18px;padding:7px 13px;color:#ffe9bf;background:#392a20b3;font:600 clamp(11px,1.05vw,14px) system-ui;cursor:inherit;min-height:32px}
+.wreath-primary{background:linear-gradient(#ffe5ac,#d3a468);color:#432d1c;border-color:#fff0be}
+.wreath-chip:hover{box-shadow:0 0 8px #ffe3a666}.wreath-chip:disabled{opacity:.45}
+.wreath-layer.is-inactive .wreath-control,.wreath-tray.is-inactive .wreath-control{pointer-events:none!important}
+.wreath-wet-glue{position:absolute;z-index:7;transform:translate(-50%,-50%) rotate(-18deg);border-radius:55% 40% 50% 38%;background:linear-gradient(120deg,#fffdf3cc,#d7b78266);box-shadow:inset 1px 1px 2px #fff,0 0 4px #ffecbb66;pointer-events:none;animation:wreath-glue-dry .8s ease-out forwards}
+.wreath-gun-action{position:absolute;z-index:8;pointer-events:none;transform:translate(-50%,-50%) rotate(-15deg);animation:wreath-glue-gun .65s ease-in-out forwards}
+.wreath-room-projection{position:absolute;inset:0;transform-origin:0 0;transform:translate(0%,53.28%) scale(.68,.32);pointer-events:none}
+.wreath-room-prop{pointer-events:none;filter:drop-shadow(2px 5px 3px #26150966)}
+.is-paused .wreath-wet-glue,.is-paused .wreath-gun-action{animation-play-state:paused!important}
+.compact .wreath-tray{gap:4px;padding:4px}.compact .wreath-chip{padding:4px 8px;min-height:28px}
+@keyframes wreath-glue-dry{0%,35%{opacity:.9;transform:translate(-50%,-50%) scale(.6)}100%{opacity:0;transform:translate(-50%,-50%) scale(1)}}
+@keyframes wreath-glue-gun{0%{opacity:0;transform:translate(0%,-60%) rotate(-15deg)}30%,65%{opacity:1;transform:translate(-50%,-50%) rotate(-15deg)}100%{opacity:0;transform:translate(0%,-60%) rotate(-15deg)}}
+@media(max-width:600px){.wreath-tray{gap:4px;padding:5px}.wreath-actions{gap:3px}.wreath-chip{padding:5px 7px;min-height:28px;font-size:11px}.wreath-instruction{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.wreath-gun-action{display:none}.wreath-wet-glue{animation-duration:.01s}.wreath-gun{transition:none}}
