@@ -1,6 +1,6 @@
 {
   "id": "rowan-tea-v1",
-  "layoutRevision": 4,
+  "layoutRevision": 5,
   "title": "Рябина и осенняя книга",
   "background": "assets/rowan-puzzle-v1/background-blue.svg",
   "aspect": 0.6666666666666666,
@@ -30,7 +30,8 @@
       "nativeAspect": 0.6666666666666666,
       "src": "assets/phone-v4/71264a3cfa322d.webp",
       "outline": "M2 2H98V98H2Z",
-      "croppedForCanvas": true
+      "croppedForCanvas": true,
+      "trayLabel": "Скатерть"
     },
     {
       "id": "book",
