@@ -1,0 +1,10 @@
+/* One real menu on every screen; no duplicate painted controls. */
+#menuView .menu-hit,#menuView>.menu-icon{display:none!important}
+#menuView .mobile-home-actions{position:absolute;z-index:8;left:calc(50% - var(--menu-image-width)*.0478);top:41%;transform:translateX(-50%);display:grid;gap:22px;width:clamp(210px,30vw,300px);padding:20px 12px 12px;border:1px solid #d0aa65;border-radius:16px;background:linear-gradient(125deg,#38271df5,#644028f5);box-shadow:0 5px 22px #0006}
+#menuView .mobile-home-actions button{position:relative;isolation:isolate;min-height:54px;padding:14px 12px 9px;border:1px solid #cda765;border-radius:12px;background:linear-gradient(#3c6545,#203e2d);color:#fff1cf;font:600 21px system-ui;letter-spacing:.2px;cursor:pointer}
+#menuView .mobile-home-actions button:first-child{background:linear-gradient(#a53734,#7c2028)}
+#menuView .mobile-home-actions button::before{content:"";position:absolute;left:-5px;right:-5px;top:-23px;height:42px;background:url('assets/menu-snow-garland.svg') center/100% 100% no-repeat;pointer-events:none}
+#menuView .mobile-home-actions button:hover{filter:brightness(1.13)}
+#menuView .mobile-home-actions button:focus-visible{outline:3px solid #fff0b6;outline-offset:4px}
+@media(max-aspect-ratio:1/1){#menuView .mobile-home-actions{left:50%;top:46%;width:min(300px,76vw)}}
+@media(max-height:500px) and (orientation:landscape){#menuView .mobile-home-actions{gap:14px;padding:15px 10px 10px;width:220px;top:40%}#menuView .mobile-home-actions button{min-height:40px;padding:10px 8px 5px;font-size:17px}#menuView .mobile-home-actions button::before{top:-18px;height:32px}}

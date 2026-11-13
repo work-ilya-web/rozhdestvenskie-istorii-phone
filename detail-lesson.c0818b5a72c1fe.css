@@ -1,0 +1,15 @@
+/* First-story exploration guidance stays anchored to real entrances. */
+.detail-lesson-note{position:absolute;z-index:5;left:50%;top:12px;transform:translateX(-50%);width:max-content;max-width:calc(100% - 136px);padding:11px 19px;border:1px solid #e8c47b;border-radius:18px;background:linear-gradient(135deg,#243d4cf2,#152c3eea);box-shadow:0 4px 18px #071b3066, inset 0 1px #fff3;pointer-events:none;text-align:center;color:#fff2cf;font:600 clamp(13px,1.3vw,18px)/1.4 system-ui;text-shadow:0 1px 2px #0008}
+.detail-lesson-note[hidden]{display:none!important}
+.detail-hotspot.detail-lesson-target{opacity:1;overflow:visible}
+.detail-lesson-target .detail-shimmer{background:radial-gradient(ellipse,#ffe5a349,transparent 70%);border:2px solid #ffe6a5b3;box-shadow:0 0 20px #ffdb7366;animation:lesson-ring 2.4s ease-in-out infinite}
+.detail-lesson-target .detail-loupe-beacon{right:calc(50% - 22px);top:calc(50% - 22px);width:44px;filter:drop-shadow(0 0 8px #ffd66c)}
+.detail-lesson-target .detail-loupe{fill:#234353e8;stroke:#fff1c0;animation:lesson-loupe 2.4s ease-in-out infinite}
+.detail-lesson-target .detail-fireflies{inset:-18px}
+.detail-lesson-target .detail-fireflies i{width:5px;height:5px}
+.detail-lesson-caption{position:absolute;left:50%;top:calc(50% + 34px);transform:translateX(-50%);width:max-content;max-width:190px;padding:6px 11px;border:1px solid #d5b475;border-radius:12px;background:#183445eb;color:#fff0c9;font:600 13px/1.3 system-ui;text-shadow:0 1px #0007;pointer-events:none;box-shadow:0 3px 12px #0004}
+.detail-lesson-back{box-shadow:0 0 0 3px #ffe6a599,0 0 24px #ffd66c!important}
+@keyframes lesson-ring{0%,100%{opacity:.6}50%{opacity:1;box-shadow:0 0 30px #ffdb7399}}
+@keyframes lesson-loupe{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@media(max-width:600px){.detail-lesson-note{top:8px;max-width:calc(100% - 112px);padding:7px 10px;font-size:12px}.detail-lesson-caption{font-size:11px;max-width:130px;padding:5px 8px}}
+@media(prefers-reduced-motion:reduce){.detail-lesson-target .detail-shimmer,.detail-lesson-target .detail-loupe,.detail-lesson-target .detail-fireflies,.detail-lesson-target .detail-fireflies i{animation:none!important}}

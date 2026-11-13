@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900" viewBox="0 0 600 900">
+ <defs>
+  <linearGradient id="paper" x2=".75" y2="1"><stop stop-color="#f2e5c8"/><stop offset=".5" stop-color="#ead8b5"/><stop offset="1" stop-color="#dcc59c"/></linearGradient>
+  <linearGradient id="nut" x2=".85" y2="1"><stop stop-color="#dfb577"/><stop offset=".45" stop-color="#c79759"/><stop offset="1" stop-color="#a57842"/></linearGradient>
+  <linearGradient id="cap" x2=".4" y2="1"><stop stop-color="#a08961"/><stop offset="1" stop-color="#7f6949"/></linearGradient>
+  <radialGradient id="light"><stop stop-color="#fff9e7" stop-opacity=".5"/><stop offset=".7" stop-color="#fff4d9" stop-opacity=".15"/><stop offset="1" stop-color="#fff4d9" stop-opacity="0"/></radialGradient>
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".045"/></feComponentTransfer><feBlend in="SourceGraphic" mode="soft-light"/></filter>
+  <g id="acorn" stroke-linejoin="round" stroke-linecap="round">
+   <path d="M-25-5C-27 14-19 34-6 42L0 48 6 42C20 34 27 14 25-5Z" fill="url(#nut)" stroke="#a9814c" stroke-width="1.7"/>
+   <path d="M-13 3C-17 16-12 31-5 36" fill="none" stroke="#f8dfaf" stroke-width="4" opacity=".55"/>
+   <path d="M10 7C14 21 8 35 2 39" fill="none" stroke="#8d693b" stroke-width="1.2" opacity=".28"/>
+   <path d="M-30-6C-29-20-16-28 0-28 17-28 28-19 30-6 12 2-12 2-30-6Z" fill="url(#cap)" stroke="#786444" stroke-width="2"/>
+   <path d="M-27-8Q0 0 27-8M-21-19-8-7M-9-25 9-7M6-25 23-12M-23-12-8-25M-9-7 10-25M7-5 24-19" fill="none" stroke="#ddcca4" stroke-width="1.5" opacity=".54"/>
+   <path d="M0-27C-2-37 3-42 9-43" fill="none" stroke="#8c7450" stroke-width="5"/>
+   <path d="M0-30Q1-37 7-40" fill="none" stroke="#c1ab7f" stroke-width="1.5"/>
+  </g>
+  <g id="sprig" fill="none" stroke="#a1a180" stroke-width="1.9" stroke-linecap="round"><path d="M0 28Q-5 0 10-28"/><path d="M0 16Q-18 9-16-1 0 0 0 16M1 4Q19 0 19-10 4-11 1 4M3-8Q-10-16-6-24 5-23 3-8"/></g>
+  <pattern id="acorns" width="180" height="230" patternUnits="userSpaceOnUse">
+   <g opacity=".78"><use href="#acorn" transform="translate(41 54) rotate(-24) scale(.92)"/><use href="#acorn" transform="translate(133 166) rotate(27) scale(.87)"/></g>
+   <g opacity=".38"><use href="#sprig" transform="translate(126 48) rotate(25) scale(.75)"/><use href="#sprig" transform="translate(43 174) rotate(-32) scale(.7)"/></g>
+   <g fill="#ac936d" opacity=".32"><circle cx="89" cy="112" r="2"/><circle cx="167" cy="97" r="1.7"/><circle cx="11" cy="215" r="1.8"/></g>
+  </pattern>
+ </defs>
+ <rect width="600" height="900" fill="url(#paper)"/>
+ <rect width="600" height="900" fill="url(#acorns)"/>
+ <ellipse cx="280" cy="390" rx="450" ry="620" fill="url(#light)"/>
+ <rect width="600" height="900" fill="transparent" filter="url(#grain)"/>
+</svg>

@@ -1,0 +1,35 @@
+/* Registered wide painting; the same coordinate space owns art, lights and hits. */
+#menuView{position:fixed;inset:0;min-height:0;height:100svh;width:100%;padding:0;overflow:hidden;isolation:isolate;--menu-image-height:100svh;--menu-image-width:calc(var(--menu-image-height)*1672/941);background:#162d49}
+#menuView::before{content:"";position:absolute;inset:-12px;z-index:-1;pointer-events:none;background:url('assets/phone-v4/25c8cb3c27dcb4.webp') center/cover no-repeat;filter:blur(7px);transform:scale(1.03)}
+#menuView .menu-art{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:var(--menu-image-width);height:var(--menu-image-height);aspect-ratio:1672/941;max-width:none;border-radius:0;box-shadow:none;overflow:visible;container-type:inline-size}
+#menuView .menu-art>img{display:block;width:100%;height:100%;max-width:none;object-fit:fill;pointer-events:none;user-select:none}
+.menu-subtitle{position:absolute;left:37.44%;top:29.55%;width:16.03%;height:5.72%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.06em;padding:0;color:#ffe3ad;font:400 1.02cqw/1.2 Georgia,serif;text-shadow:0 1px 2px #321b0c;letter-spacing:.015em;pointer-events:none;z-index:3;white-space:nowrap}
+#menuView .menu-hit{left:36.48%;width:17.41%;height:9.25%;border:0;border-radius:21%;padding:0;z-index:4;cursor:url('assets/christmas-cursor.svg') 4 3,pointer}
+#menuView .menu-play{top:40.807%}
+#menuView .menu-levels{top:51.328%;height:8.608%}
+#menuView .menu-settings{top:60.999%;height:8.183%}
+#menuView .menu-more{top:70.032%;height:8.289%}
+#menuView>.menu-icon{position:absolute;z-index:5;top:calc(50% - var(--menu-image-height)*.481934);width:calc(var(--menu-image-height)*.085016);height:calc(var(--menu-image-height)*.090329);padding:0;cursor:url('assets/christmas-cursor.svg') 4 3,pointer;overflow:visible}
+#menuView>#menuMusic{left:calc(50% + var(--menu-image-height)*.340064)}
+#menuView>#menuSound{left:calc(50% + var(--menu-image-height)*.420829)}
+#menuView>#menuFullscreen{left:calc(50% + var(--menu-image-height)*.503719)}
+#menuView .menu-hit::before,#menuView .menu-icon::before{content:"";position:absolute;left:-5%;right:-5%;top:-8%;height:38%;pointer-events:none;opacity:0;background:radial-gradient(ellipse at 50% 45%,#fffbead9 0,#fff4b955 35%,transparent 72%);filter:blur(3px);mix-blend-mode:screen;transition:opacity .12s ease-out}
+#menuView .menu-hit:is(:hover,:focus-visible)::before,#menuView .menu-icon:is(:hover,:focus-visible)::before{opacity:1}
+#menuView .hover-snow{inset:-5px -4px;opacity:0;transition:opacity .1s ease-out}
+#menuView .hover-snow i{background:#fffef5;box-shadow:0 0 4px 3px #fffdf5,0 0 11px 5px #ffeeb8e6,0 0 22px 8px #ffd264a0;opacity:0}
+#menuView .hover-snow i:nth-child(3n){filter:drop-shadow(0 0 4px #fff6c7)}
+#menuView .menu-hit:is(:hover,:focus-visible) .hover-snow,#menuView .menu-icon:is(:hover,:focus-visible) .hover-snow{opacity:1}
+#menuView .menu-hit:is(:hover,:focus-visible) .hover-snow i,#menuView .menu-icon:is(:hover,:focus-visible) .hover-snow i{animation:menu-spark-bright 1.05s ease-in-out infinite;animation-delay:var(--spark-delay)}
+@keyframes menu-spark-bright{0%,100%{opacity:.45;transform:translateY(1px) scale(.72)}45%{opacity:1;transform:translateY(-2px) scale(1.42)}70%{opacity:.75;transform:translateY(-1px) scale(1)}}
+#menuView[hidden] .hover-snow i{animation-play-state:paused!important}
+@media(min-aspect-ratio:1672/941){#menuView .menu-art{mask-image:linear-gradient(90deg,transparent,#000 1.5%,#000 98.5%,transparent)}}
+@media(max-aspect-ratio:1/1){
+ #menuView{--menu-image-height:min(100svh,calc(100vw*941/650))}
+ #menuView .menu-art{transform:translate(-45.22%,-50%);mask-image:linear-gradient(0deg,transparent,#000 2%,#000 98%,transparent)}
+ #menuView>.menu-icon{left:auto!important;top:max(10px,env(safe-area-inset-top,0px));width:48px;height:51px;background-size:100% 100%;border-radius:18%;background-repeat:no-repeat}
+ #menuView>#menuMusic{right:128px;background-image:url('assets/phone-v4/8d8d6356544a45.webp')}
+ #menuView>#menuSound{right:70px;background-image:url('assets/phone-v4/5937b40cc56630.webp')}
+ #menuView>#menuFullscreen{right:12px;background-image:url('assets/phone-v4/04fe39a718cecb.webp')}
+ #menuView .menu-icon.off::after{font-size:32px}
+}
+@media(prefers-reduced-motion:reduce){#menuView .menu-hit:is(:hover,:focus-visible) .hover-snow i,#menuView .menu-icon:is(:hover,:focus-visible) .hover-snow i{animation:none!important;opacity:1}}

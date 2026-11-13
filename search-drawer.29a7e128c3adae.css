@@ -1,0 +1,15 @@
+/* Find lists slide below the frame; the painting keeps its full size. */
+.search-drawer-layout .game-frame{overflow:visible}
+.play-view.search-drawer-layout .scene-stage{width:100%;height:var(--stage-height)}
+.play-view .search-tray{position:absolute;z-index:7;bottom:0;left:0;right:0;transition:transform .28s ease;overflow:visible}
+.play-view .search-tray.search-drawer-collapsed{transform:translateY(100%)}
+.search-drawer-handle{position:absolute;z-index:2;right:12px;bottom:100%;min-width:142px;min-height:40px;padding:8px 17px;border:1px solid #dfbd7e;border-bottom:0;border-radius:16px 16px 0 0;background:linear-gradient(#775132,#432b1e);color:#fff1c9;font:600 15px/1.2 system-ui;cursor:pointer;box-shadow:0 -3px 14px #14233566;touch-action:manipulation}
+.search-drawer-handle:focus-visible{outline:3px solid #ffedaa;outline-offset:2px}
+.search-drawer-collapsed>:not(.search-drawer-handle):not(.search-drawer-lesson){visibility:hidden;pointer-events:none}
+.search-drawer-lesson{position:absolute;right:10px;bottom:calc(100% + 49px);width:280px;max-width:calc(100vw - 32px);padding:11px 14px;border:1px solid #e6c683;border-radius:15px;background:#19394eef;color:#fff0c8;font:600 14px/1.4 system-ui;box-shadow:0 4px 20px #0005;pointer-events:none}
+.search-drawer-lesson::after{content:'';position:absolute;right:55px;top:100%;border:8px solid transparent;border-top-color:#e6c683}
+.search-drawer-lesson[hidden]{display:none!important}
+.drawer-teaching{animation:drawer-handle-glow 2.2s ease-in-out infinite}
+@keyframes drawer-handle-glow{0%,100%{box-shadow:0 -2px 12px #ffe7a44d}50%{box-shadow:0 -3px 23px #ffdf8aab}}
+@media(max-height:500px){.search-drawer-lesson{font-size:12px;padding:8px 11px;bottom:calc(100% + 46px)}}
+@media(prefers-reduced-motion:reduce){.play-view .search-tray{transition:none}.drawer-teaching{animation:none;box-shadow:0 0 16px #ffe7a488}}
