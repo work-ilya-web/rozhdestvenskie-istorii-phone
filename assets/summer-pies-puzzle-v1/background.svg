@@ -1,0 +1,1 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1500"><defs><pattern id="linen" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 2h8M2 0v8" stroke="#a4b1a0" opacity=".15"/></pattern></defs><path fill="#adb9ae" d="M0 0h1000v1500H0z"/><path fill="url(#linen)" d="M0 0h1000v1500H0z"/></svg>
