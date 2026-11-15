@@ -1,6 +1,6 @@
 {
   "id": "snow-cabin-v1",
-  "layoutRevision": 3,
+  "layoutRevision": 4,
   "restoreAddedPieces": [
     {
       "id": "snow-clouds",
@@ -59,8 +59,8 @@
       "id": "roof-snow",
       "name": "Снег на крыше",
       "stage": 3,
-      "x": 7.700000000000003,
-      "y": 10.598155467720701,
+      "x": 7.099999999999994,
+      "y": 14.998155467720707,
       "width": 118,
       "height": 75.4018445322793,
       "layer": 30,
