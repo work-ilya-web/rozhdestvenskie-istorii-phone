@@ -1,5 +1,5 @@
 ﻿'use strict';
-const CACHE='christmas-stories-mobile-phone-v4-039975fb5e7435';
+const CACHE='christmas-stories-mobile-phone-v4-ee4da749dab7af';
 const HOME=new URL('./',self.registration.scope).href;
 self.addEventListener('install',event=>event.waitUntil(self.skipWaiting()));
 self.addEventListener('activate',event=>event.waitUntil((async()=>{for(const key of await caches.keys())if(key.startsWith('christmas-stories-mobile-')&&key!==CACHE)await caches.delete(key);await self.clients.claim()})()));
